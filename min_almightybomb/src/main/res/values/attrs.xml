@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="setSpinView">
+        <attr name="spinview_img" format="reference"></attr>
+        <attr name="spinview_text" format="string"></attr>
+    </declare-styleable>
+</resources>
