@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_dialog)
-        
+
         //消息等待提示框
         button5.setOnClickListener(View.OnClickListener {
             val dialog = SweetAlertDialog(this)
@@ -39,7 +39,9 @@ class MainActivity : AppCompatActivity() {
         button9.setOnClickListener(View.OnClickListener {
             TToast.showAnimToast(this,"文字提示居中")
         })
-    }
 
 
+
+
+}
 }
