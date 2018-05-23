@@ -10,6 +10,8 @@ import com.example.min_almightybomb.dialog.SweetAlertDialog
 import com.example.min_almightybomb.toast.TToast
 
 
+
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +40,19 @@ class MainActivity : AppCompatActivity() {
 
         button9.setOnClickListener(View.OnClickListener {
             TToast.showAnimToast(this,"文字提示居中")
+            var selfDialog=SelfDialog(this);
+
+            selfDialog.setTitle("采纳答案")
+            selfDialog.setMessage("是否将该答案纳为最佳答案？")
+            selfDialog.setYesOnclickListener("确定", SelfDialog.onYesOnclickListener {
+                //Toast.makeText(LableActivity.this,"点击了--确定--按钮",Toast.LENGTH_LONG).show();
+                selfDialog.dismiss()
+            })
+            selfDialog.setNoOnclickListener("取消", SelfDialog.onNoOnclickListener {
+                //Toast.makeText(LableActivity.this,"点击了--取消--按钮",Toast.LENGTH_LONG).show();
+                selfDialog.dismiss()
+            })
+            selfDialog.show()
         })
 
 
